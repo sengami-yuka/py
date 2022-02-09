@@ -17,3 +17,4 @@ while 1:
     message = "hi from server"
     msg = message.encode()
     sockfd.sendto(msg, client_addr)
+
