@@ -26,8 +26,8 @@ class Vector:
 
 
 v = Vector(3, 4)
-print abs(v)
-print bool(v)
-print bool(Vector())
-print v * 3
-print v + Vector(1, 3)
+print(abs(v))
+print(bool(v))
+print(bool(Vector()))
+print(v * 3)
+print(v + Vector(1, 3))

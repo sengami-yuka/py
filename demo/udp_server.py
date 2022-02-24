@@ -12,7 +12,7 @@ sockfd.bind(("127.0.0.1", 9999))
 while 1:
     time.sleep(10)
     data, client_addr = sockfd.recvfrom(1024)
-    print data
+    print(data)
     # send message
     message = "hi from server"
     msg = message.encode()

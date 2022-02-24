@@ -4,7 +4,7 @@ import json
 
 a = numpy.arange(12000000)
 a.shape = 3000, 4000
-print a.dtype
+print(a.dtype)
 numpy.save('yukanp', a)
 
 

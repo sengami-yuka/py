@@ -8,9 +8,7 @@ class Solution():
         area = 0
         i = 0
         if row[1] == 0 or row[0] == 0 and row[2] == 0:
-            print 'skip', row
             return max_area, max_left, max_right
-        print row
         while i < len(row):
             if not result or row[result[-1]] <= row[i]:
                 result.append(i)
@@ -44,7 +42,7 @@ class Solution():
         max_area = 0
         max_left = -1
         max_right = -1
-        for i in xrange(len(row)):
+        for i in range(len(row)):
             h = row[i]
             if h == 0:
                 continue
@@ -83,7 +81,7 @@ class Solution():
                 left = tmp_left
                 right = tmp_right
                 bottom = i
-                top = bottom - (result / (right - left + 1)) + 1
+                top = bottom - (result // (right - left + 1)) + 1
         return result, top, bottom, left, right
 
 

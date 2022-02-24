@@ -25,7 +25,6 @@ def insertionSort(arr, left, right):
         while j > left and arr[j] < arr[j - 1]:
             arr[j], arr[j - 1] = arr[j - 1], arr[j]
             j -= 1
-    # print arr[left: right]
 
 
 # Merge function merges the sorted runs
@@ -71,9 +70,7 @@ def merge(arr, l, m, r):
 # array[0...n-1] (similar to merge sort)
 def timSort(arr):
     n = len(arr)
-    # print n
     minRun = calcMinRun(n)
-    # print minRun
     # Sort individual subarrays of size RUN
     for start in range(0, n, minRun):
         end = min(start + minRun - 1, n - 1)

@@ -27,4 +27,4 @@ class FrenchDeck:
 
 deck = FrenchDeck()
 random.shuffle(deck._cards)
-print deck[:]
+print(deck[:])

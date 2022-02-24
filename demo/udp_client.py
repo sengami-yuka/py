@@ -15,4 +15,4 @@ sockfd.sendto(msg, server_addr)
 
 # recv message
 data, addr = sockfd.recvfrom(1024)
-print data
+print(data)
