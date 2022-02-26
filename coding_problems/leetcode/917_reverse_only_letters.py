@@ -22,7 +22,7 @@ class Solution:
 
 s = Solution()
 
-print(s.reverseOnlyLetters2('ab-cd'))
-print(s.reverseOnlyLetters2('a-bC-dEf-ghIj'))
-print(s.reverseOnlyLetters2('Test1ng-Leet=code-Q!'))
-print(s.reverseOnlyLetters2('1234'))
+assert 'dc-ba' == s.reverseOnlyLetters('ab-cd')
+assert 'j-Ih-gfE-dCba' == s.reverseOnlyLetters('a-bC-dEf-ghIj')
+assert 'Qedo1ct-eeLg=ntse-T!' == s.reverseOnlyLetters('Test1ng-Leet=code-Q!')
+assert '1234' == s.reverseOnlyLetters('1234')

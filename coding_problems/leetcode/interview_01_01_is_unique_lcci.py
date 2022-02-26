@@ -25,4 +25,5 @@ class Solution:
 
 
 s = Solution()
-print s.isUnique2("abc")
+assert s.isUnique2("abc")
+assert not s.isUnique2("aab")
