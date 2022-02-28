@@ -1,19 +1,21 @@
 class Solution(object):
     def reverse(self, x):
         rev = 0
-        MAX = 214748364
-        if x < 0:
+        MIN = -214748364
+        if x > 0:
             x = -x
-            neg = True
+            pos = True
         else:
-            neg = False
+            pos = False
         while x:
-            rem = x % 10
-            if rev > MAX:
+            if rev < MIN:
                 return 0
-            x /= 10
+            rem = x % 10
+            if rem > 0:
+                rem -= 10
+            x = (x - rem) / 10
             rev = rev * 10 + rem
-        if neg:
+        if pos:
             return -rev
         return rev
 
