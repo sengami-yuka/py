@@ -4,8 +4,8 @@ class Solution(object):
             return False
         if len(first) < len(second):
             first, second = second, first
-        for i in range(len(second)):
-            if first[i] != second[i]:
+        for i, c in enumerate(second):
+            if first[i] != c:
                 return first[i + 1:] == second[i:] or first[i + 1:] == second[i + 1:]
         return True
 
