@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def replaceSpaces(self, S, length):
         return S[:length].replace(' ', '%20')
 

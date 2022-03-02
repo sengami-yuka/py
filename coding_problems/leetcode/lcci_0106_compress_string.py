@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def compressString(self, S):
         if not S:
             return ''

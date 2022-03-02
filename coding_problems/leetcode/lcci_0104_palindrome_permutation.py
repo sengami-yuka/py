@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-class Solution(object):
+class Solution:
     def canPermutePalindrome(self, s):
         """
         :type s: str
@@ -11,7 +11,7 @@ class Solution(object):
         for c in s:
             d[c] += 1
         odd_c = 0
-        for v in d.itervalues():
+        for v in d.values():
             if v % 2 == 1:
                 odd_c += 1
                 if odd_c == 2:

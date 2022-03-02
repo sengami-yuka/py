@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def reverse(self, x):
         rev = 0
         MIN = -214748364

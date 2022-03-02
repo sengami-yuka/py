@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-class Solution(object):
+class Solution:
     def CheckPermutation(self, s1, s2):
         return sorted(s1) == sorted(s2)
 

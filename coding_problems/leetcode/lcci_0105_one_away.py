@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def oneEditAway(self, first, second):
         if abs(len(first) - len(second)) > 1:
             return False

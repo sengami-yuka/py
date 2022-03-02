@@ -1,5 +1,5 @@
 # Definition for singly-linked list.
-class ListNode(object):
+class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
@@ -13,7 +13,7 @@ class ListNode(object):
         return '[' + ','.join(res) + ']'
 
 
-class Solution(object):
+class Solution:
     def addTwoNumbers(self, l1, l2):
         """
         :type l1: ListNode
