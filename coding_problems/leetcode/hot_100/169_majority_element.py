@@ -12,7 +12,7 @@ class Solution:
                 return i
 
 
-class Solution2:
+class Solution2:  # Boyer-Moore
     def majorityElement(self, nums: List[int]) -> int:
         c = None
         v = 0
