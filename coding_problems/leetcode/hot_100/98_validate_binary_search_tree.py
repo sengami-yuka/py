@@ -12,14 +12,13 @@ class Solution:
             nonlocal pre
             if node:
                 dfs(node.left)
-                if pre >= node.val:
-                    raise RuntimeError
+                assert pre < node.val
                 pre = node.val
                 dfs(node.right)
         pre = float('-inf')
         try:
             dfs(root)
-        except RuntimeError:
+        except AssertionError:
             return False
         return True
 
