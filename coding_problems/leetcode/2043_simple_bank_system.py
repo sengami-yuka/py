@@ -63,7 +63,7 @@ ipt1 = ["Bank", "withdraw", "transfer", "deposit", "transfer", "withdraw"]
 ipt2 = [[[10, 100, 20, 50, 30]], [3, 10], [5, 1, 20], [5, 20], [3, 4, 15], [10, 50]]
 out = [None, True, True, True, False, False]
 
-bank = Bank2(ipt2[0][0])
+bank = Bank2(*ipt2[0])
 for i in range(1, len(ipt1)):
     ans = bank.__getattribute__(ipt1[i])(*ipt2[i])
     assert ans == out[i], ans
