@@ -1,7 +1,10 @@
 # Definition for a binary tree node.
+import collections
+
+
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
+    def __init__(self, x, left=None, right=None):
+        self.val = x
         self.left = left
         self.right = right
 
@@ -36,8 +39,7 @@ class Solution2:
         return self.s(root, root)
 
 
-solution = Solution2()
-root = TreeNode(1, TreeNode(2, None, TreeNode(3)), TreeNode(2, None, TreeNode(3)))
+solution = Solution()
+root = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(4), TreeNode(3)))
+assert solution.isSymmetric(root)
 
-ans = solution.isSymmetric(root)
-print(ans)
