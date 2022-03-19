@@ -39,6 +39,21 @@ class Solution:
 
 
 class Solution2:
+    def verifyPostorder(self, postorder: List[int]) -> bool:
+        def recur(i, j):
+            if i >= j:
+                return True
+            p = i
+            while postorder[p] < postorder[j]:
+                p += 1
+            m = p
+            while postorder[p] > postorder[j]:
+                p += 1
+            return p == j and recur(i, m - 1) and recur(m, j - 1)
+        return recur(0, len(postorder) - 1)
+
+
+class Solution3:
     def verifyPostorder(self, postorder: [int]) -> bool:
         stack, root = [], float("+inf")
         for val in reversed(postorder):
@@ -50,7 +65,7 @@ class Solution2:
         return True
 
 
-solution = Solution2()
+solution = Solution3()
 ans = solution.verifyPostorder([1,6,3,2,5])
 assert not ans
 ans = solution.verifyPostorder([1,3,2,6,5])
