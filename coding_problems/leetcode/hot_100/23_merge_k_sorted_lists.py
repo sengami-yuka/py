@@ -16,25 +16,24 @@ class ListNode:
             cur = cur.next
         return str(a)
 
-    def __gt__(self, other):
-        return self.val > other.val
-
 
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        def __lt__(this, other):
+            return this.val < other.val
+        ListNode.__lt__ = __lt__
         heap = []
-        for i, lst in enumerate(lists):
+        for lst in lists:
             if lst:
-                heapq.heappush(heap, (lst.val, i))
+                heapq.heappush(heap, lst)
         head = ListNode()
         cur = head
         while heap:
-            _, i = heapq.heappop(heap)
-            cur.next = lists[i]
-            lists[i] = lists[i].next
+            node = heapq.heappop(heap)
+            cur.next = node
             cur = cur.next
             if cur.next:
-                heapq.heappush(heap, (cur.next.val, i))
+                heapq.heappush(heap, cur.next)
         return head.next
 
 
