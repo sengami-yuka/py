@@ -35,14 +35,14 @@ class Solution2:
 class Solution3:
     def maxConsecutiveAnswers(self, answerKey: str, k: int) -> int:
         left = cnts_t = cnts_f = 0
-        for right, c in enumerate(answerKey):
+        for c in answerKey:
             cnts_t += c == 'T'
             cnts_f += c == 'F'
             if cnts_t > k and cnts_f > k:
                 cnts_t -= answerKey[left] == 'T'
                 cnts_f -= answerKey[left] == 'F'
                 left += 1
-        return right - left + 1
+        return len(answerKey) - left
 
 
 solution = Solution3()
