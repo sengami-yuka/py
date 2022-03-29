@@ -55,5 +55,8 @@ assert ans == 3, ans
 ans = solution.maxConsecutiveAnswers('TTFTTFTT', 1)
 assert ans == 5, ans
 
+ans = solution.maxConsecutiveAnswers('TTFTTFT', 1)
+assert ans == 5, ans
+
 ans = solution.maxConsecutiveAnswers('TTFTTFTTT', 1)
 assert ans == 6, ans
