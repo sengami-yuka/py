@@ -8,7 +8,7 @@ class Solution:
         s = m + n - 2
         c = 1
         for i in range(1, m):
-            c *= s / i
+            c = c * s // i
             s -= 1
-        return int(round(c))
+        return c
         # return int(math.factorial(m + n - 2) / (math.factorial(m - 1) * math.factorial(n - 1)))
