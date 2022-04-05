@@ -66,11 +66,11 @@ class Solution4:  # with path
 
         nd = len(d)
         path = [0] * nd
-        j = 0
-        for i, v in enumerate(path_idx):
-            if v >= j:
-                path[v] = nums[i]
-                j = v
+        j = nd - 1
+        for i in reversed(range(n)):
+            if path_idx[i] == j:
+                path[j] = nums[i]
+                j -= 1
         print(path)
         return len(d)
 
@@ -96,3 +96,6 @@ assert ans == 6, ans
 
 ans = solution.lengthOfLIS([0,8,4,12,2,13,7])
 assert ans == 4, ans
+
+ans = solution.lengthOfLIS([0,8,9,12,2,3,4,13,7])
+assert ans == 5, ans
