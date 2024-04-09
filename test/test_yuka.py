@@ -11,6 +11,9 @@ class TestYuka(unittest.TestCase):
     def test_yuka3(self):
         self.assertLess(1, 2)
 
+    def test_yuka4(self):
+        self.assertGreaterEqual(33, 33)
+
     def test_yuka5(self):
         self.assertGreaterEqual(44, 33)
 
