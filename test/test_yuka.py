@@ -14,6 +14,12 @@ class TestYuka(unittest.TestCase):
     def test_yuka4(self):
         self.assertGreaterEqual(33, 33)
 
+    def test_yuka5(self):
+        self.assertGreaterEqual(44, 33)
+
+    def test_yuka6(self):
+        self.assertGreaterEqual(55, 33)
+
 
 if __name__ == '__main__':
     unittest.main()
