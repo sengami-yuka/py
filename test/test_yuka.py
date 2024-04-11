@@ -25,6 +25,7 @@ class TestYuka(unittest.TestCase):
 
     def test_yuka8(self):
         self.assertGreaterEqual(44, 33)
+        self.assertGreaterEqual(33, 33)
 
 
 if __name__ == '__main__':
